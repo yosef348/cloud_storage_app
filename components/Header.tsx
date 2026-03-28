@@ -5,10 +5,7 @@ import Search from "@/components/Search";
 import FileUploader from "@/components/FileUploader";
 import { signOutUser } from "@/lib/actions/user.actions";
 
-const Header = ({
-  userId,
-  accountId,
-}: {
+const Header = ({ userId, accountId, }: {
   userId: string;
   accountId: string;
 }) => {
@@ -20,7 +17,6 @@ const Header = ({
         <form
           action={async () => {
             "use server";
-
             await signOutUser();
           }}
         >
