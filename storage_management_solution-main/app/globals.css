@@ -262,7 +262,7 @@
     @apply text-center text-light-100 !important;
   }
   .delete-file-name {
-    @apply font-medium text-brand-100 !important;
+    @apply font-medium text-[#6366F1] !important;
   }
   .modal-cancel-button {
     @apply h-[52px] flex-1 rounded-full bg-white text-light-100 hover:bg-transparent !important;
@@ -325,7 +325,7 @@
     @apply mx-auto aspect-square w-[180px] text-white xl:w-[250px] !important;
   }
   .polar-grid {
-    @apply first:fill-white/20 last:fill-brand !important;
+    @apply first:fill-white/20 last:fill-[#6366F1] !important;
   }
   .chart-details {
     @apply flex-1 items-start px-3 py-0 sm:px-5 lg:p-3 xl:pr-5 !important;
