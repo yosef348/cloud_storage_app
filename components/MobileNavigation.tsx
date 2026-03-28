@@ -38,7 +38,7 @@ const MobileNavigation = ({
   return (
     <header className="mobile-header">
       <Image
-        src="/assets/icons/logo-full-brand.svg"
+        src="/assets/icons/logo-full.svg"
         alt="logo"
         width={120}
         height={52}
@@ -57,13 +57,17 @@ const MobileNavigation = ({
         <SheetContent className="shad-sheet h-screen px-3">
           <SheetTitle>
             <div className="header-user">
-              <Image
-                src={avatar}
-                alt="avatar"
-                width={44}
-                height={44}
-                className="header-user-avatar"
-              />
+              {avatar ? (
+                <Image
+                  src={avatar}
+                  alt="avatar"
+                  width={44}
+                  height={44}
+                  className="header-user-avatar"
+                />
+              ) : (
+                <div className="header-user-avatar bg-gray-200 rounded-full" />
+              )}
               <div className="sm:hidden lg:block">
                 <p className="subtitle-2 capitalize">{fullName}</p>
                 <p className="caption">{email}</p>
@@ -82,16 +86,18 @@ const MobileNavigation = ({
                       pathname === url && "shad-active",
                     )}
                   >
-                    <Image
-                      src={icon}
-                      alt={name}
-                      width={24}
-                      height={24}
-                      className={cn(
-                        "nav-icon",
-                        pathname === url && "nav-icon-active",
-                      )}
-                    />
+                    {icon && (
+                      <Image
+                        src={icon}
+                        alt={name}
+                        width={24}
+                        height={24}
+                        className={cn(
+                          "nav-icon",
+                          pathname === url && "nav-icon-active",
+                        )}
+                      />
+                    )}
                     <p>{name}</p>
                   </li>
                 </Link>

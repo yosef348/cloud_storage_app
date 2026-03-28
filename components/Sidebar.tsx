@@ -45,16 +45,18 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
                   pathname === url && "shad-active",
                 )}
               >
-                <Image
-                  src={icon}
-                  alt={name}
-                  width={24}
-                  height={24}
-                  className={cn(
-                    "nav-icon",
-                    pathname === url && "nav-icon-active",
-                  )}
-                />
+                {icon && (
+                  <Image
+                    src={icon}
+                    alt={name}
+                    width={24}
+                    height={24}
+                    className={cn(
+                      "nav-icon",
+                      pathname === url && "nav-icon-active",
+                    )}
+                  />
+                )}
                 <p className="hidden lg:block">{name}</p>
               </li>
             </Link>
@@ -71,13 +73,17 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
       />
 
       <div className="sidebar-user-info">
-        <Image
-          src={avatar}
-          alt="Avatar"
-          width={44}
-          height={44}
-          className="sidebar-user-avatar"
-        />
+        {avatar ? (
+          <Image
+            src={avatar}
+            alt="Avatar"
+            width={44}
+            height={44}
+            className="sidebar-user-avatar"
+          />
+        ) : (
+          <div className="sidebar-user-avatar bg-gray-200 rounded-full" />
+        )}
         <div className="hidden lg:block">
           <p className="subtitle-2 capitalize">{fullName}</p>
           <p className="caption">{email}</p>

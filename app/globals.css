@@ -234,7 +234,7 @@
     @apply h-full bg-[#111827] border border-[#1F2937] rounded-2xl p-6 xl:p-8 shadow-sm !important;
   }
   .recent-file-details {
-    @apply flex w-full flex-col xl:flex-row xl:justify-between !important;
+    @apply flex w-full justify-between xl:flex-row xl:justify-between !important;
   }
   .recent-file-name {
     @apply subtitle-2 line-clamp-1 w-full text-white sm:max-w-[200px] lg:max-w-[250px] !important;
