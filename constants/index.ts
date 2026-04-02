@@ -16,7 +16,7 @@ export const navItems = [
   },
   {
     name: "Media",
-    icon: "/assets/icons/video.svg",
+    icon: "/assets/icons/images.svg",
     url: "/media",
   },
   {
